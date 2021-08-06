@@ -20,6 +20,12 @@ class Channel:
                 Channel.n -= 1
                 current_channel = Channel.channels[Channel.n]
 
+        elif command_channel == 'that':
+            print(Channel.channels)
+            Channel.n = int(input("Select one of the available channels: "))
+            if Channel.n in Channel.channels:
+                current_channel = Channel.n
+
         print("Channel: ", current_channel)
 
         return current_channel
